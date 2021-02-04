@@ -1,14 +1,18 @@
+int randomLen = height;
 public void setup()
 {
+  background(255);
   size(300,300);
 }
 public void draw()
 {
-  sierpinski(0, 200, 200);
+  sierpinski(0, height, randomLen);
 }
 public void mousePressed()//optional
 {
-
+  background(255);
+  randomLen = (int)(Math.random()*height);
+  sierpinski(0,height,randomLen);
 }
 public void sierpinski(int x, int y, int len) 
 {
